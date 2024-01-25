@@ -24,11 +24,8 @@
   color: white;
 }
 
-.App-link,
-.codeSentence {
+.App-link {
   color: #61dafb;
-  position: relative;
-  z-index: 2;
 }
 
 @keyframes App-logo-spin {
