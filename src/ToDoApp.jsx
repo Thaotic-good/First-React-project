@@ -44,7 +44,7 @@ function ToDoApp() {
                 {toDos.map((ToDos, index) => (<li key={index}>{ToDos}</li>)
                 )}
             </ol>
-            {/*method that takes data from an array and mutates it*/}
+            {/*.map = method that takes data from an array and mutates it*/}
         </>
         )
     }
