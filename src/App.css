@@ -14,13 +14,20 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+
+}
+.body-light-mode{
+  background-color: darkgray ;
+  color: #282c34;
+}
+.body-dark-mode{
+  background-color: #282c34;
   color: white;
 }
 
@@ -43,12 +50,6 @@
 
 .countNumber {
   color: red;
-}
-.container{
-  position: relative;
-  background-image: url("https://itvolnepozice.cz/wp-content/uploads/2022/08/NET-developer-scaled.jpg");
-  background-size: cover;
-  background-position: center;
 }
 .boobContainer{
   display: flex;
