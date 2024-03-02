@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Timer from './Timer'
-import ColorChanger from "./ColorChanger.jsx";
+import NippleColorChanger from "./NippleColorChanger.jsx";
 import SignUpForm from "./SignUpForm";
 import DarkModeToggle from "./DarkModeToggle.jsx";
 
@@ -13,7 +13,7 @@ function App() {
                 <DarkModeToggle/>
                 <SignUpForm/>
                 <Timer/>
-                <ColorChanger/>
+                <NippleColorChanger/>
             </header>
         </div>
     );

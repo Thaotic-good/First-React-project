@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-function MyButton () {
+function RedButtButton () {
     const [count , setCount] = useState(0)
     const [showDialog, setShowDialog] = useState(false)
     const [color, setColor] = useState(255)
@@ -31,4 +31,4 @@ function MyButton () {
     )
 }
 
-export default MyButton
+export default RedButtButton

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const colors= ["Chocolate", "Pink", "LemonChiffon", "Maroon"];
 const centerColors = ["Pink", "PaleVioletRed", "IndianRed", "black"]
-function ColorChanger () {
+function NippleColorChanger () {
     const [color, setColor] = useState(colors[0]);
     const [centerColor, setCenterColor] = useState(centerColors[0])
 
@@ -45,4 +45,4 @@ return (
     )
 }
 
-export default ColorChanger
+export default NippleColorChanger
