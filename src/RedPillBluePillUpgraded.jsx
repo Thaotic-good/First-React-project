@@ -12,7 +12,7 @@ import realityImg from './images/reality.webp'
 
 function RedPillBluePillUpgraded(){
     const [message, setMessage]= useState("")
-    const [illustration, setIllustration ]= useState("mirror")
+    const [illustration, setIllustration ]= useState("")
     const [alt, setAlt] = useState('')
 
     const blueButtonHandler = ()=>{
