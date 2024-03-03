@@ -12,7 +12,7 @@ import mirror from './images/mirror.webp'
 * 3. I could add a mirror frame, and mirror picture, but images would have to be the same size */
 
 function RedPillBluePillUpgraded(){
-    const [message, setMessage]= useState("So Neo, you want to be a React developer. All I'm offering is the truth, nothing more.")
+    const [message, setMessage]= useState("So Neo, you want to be a React developer. \nAll I'm offering is the truth, nothing more.")
     const [illustration, setIllustration ]= useState(mirror)
     const [alt, setAlt] = useState('A mirror with a hall made out of vertical green code just like from Matrix')
 
@@ -30,12 +30,12 @@ function RedPillBluePillUpgraded(){
 
     return (
         <>
-            <img style={{width: '200px'}} src={illustration} alt={alt}/>
-            <div className="message-text">{message}</div>
+            <pre className="message-text" style={{fontFamily: 'Monospace', fontSize: '15px'}}>{message}</pre>
             <div>
             <button style={{backgroundColor: 'blue', borderRadius:'70px'}} onClick={blueButtonHandler}>Blue pill</button>
             <button style={{backgroundColor: 'red', borderRadius:'70px'}} onClick={redButtonHandler}>Red pill</button>
             </div>
+            <img style={{width: '200px'}} src={illustration} alt={alt}/>
         </>
     )
 }
