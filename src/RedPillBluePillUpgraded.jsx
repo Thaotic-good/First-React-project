@@ -10,7 +10,7 @@ import realityImg from './images/reality.webp'
 * 2. I need for each button to change the image as well as the message
 * 3. I could add a mirror frame, and mirror picture, but images would have to be the same size */
 
-function RedPillBluePill(){
+function RedPillBluePillUpgraded(){
     const [message, setMessage]= useState("")
     const [illustration, setIllustration ]= useState("mirror")
     const [alt, setAlt] = useState('')
@@ -39,4 +39,4 @@ function RedPillBluePill(){
     )
 }
 
-export default RedPillBluePill
+export default RedPillBluePillUpgraded
