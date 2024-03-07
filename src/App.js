@@ -6,11 +6,10 @@ import DominatrixToDoApp from "./DominatrixToDoApp";
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <DominatrixToDoApp/>
-            </header>
+        <div>
+            <DominatrixToDoApp/>
         </div>
+
     );
 }
 

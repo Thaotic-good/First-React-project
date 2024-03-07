@@ -20,7 +20,7 @@ function RedButtButton () {
     return (
         <>
             <p>How many times should I slap your butt?</p>
-            <button className="counterQuestion" onClick={handleClick} style={{backgroundColor: `rgb(255,${color}, ${color})`}}>
+            <button className="counterQuestion" onClick={handleClick} style={{backgroundColor: `rgb(255,${color}, ${color})`, fontSize:'3vh'}}>
                 You want to be spanked {count} times.
             </button>
             <dialog open={showDialog}>

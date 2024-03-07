@@ -13,6 +13,9 @@ function NippleColorChanger(){
             const nextIndex = (currentIndex+1) % breasts.length;
             return breasts[nextIndex];
         })}
+                                                            /*% = modulo operator gives remainder of division*/
+//                                                         /*.length= method for how many elements are in the array*/
+//                                                         /*color[3]+1 divided by 4 remains [0] starts the loop again  */
 
         function changeNipple () {
             setNipple(prevNipple => {
@@ -27,15 +30,16 @@ function NippleColorChanger(){
 
     return(
         <>
-            <div style={{display: "flex", justifyContent: 'center', alignItems:'center', position: 'absolute', top: '50%', left: '50%'}}>
-                <div style={{width:'100px', height:'100px', borderRadius: '100%', backgroundColor: breast}}></div>
-                <div style={{width:'100px', height:'100px', borderRadius: '100%', backgroundColor: breast}}></div>
+            <div className="boobContainer" style={{display: "flex", alignItems:'center', position:'relative', zIndex: '2' /*position: 'absolute', top: '25%', left: '44%'*/}}>
+                <div className="boob" style={{width:'80px', height:'80px', borderRadius: '100%', backgroundColor: breast, display: "flex", alignItems:'center', justifyContent:'center'}}>
+                    <div className="nipple" style={{width:'10px', height:'10px', borderRadius: '100%', backgroundColor: nipple, }}></div>
+                </div>
+                <div className="boob" style={{width:'80px', height:'80px', borderRadius: '100%', backgroundColor: breast, display: "flex", alignItems:'center', justifyContent:'center'}}>
+                    <div className="nipple" style={{width:'10px', height:'10px', borderRadius: '100%', backgroundColor: nipple, }}></div>
+                </div>
+                <div><button style={{position: 'static'}} onClick={handleClick}>Click me</button></div>
             </div>
-            <div style={{display: "flex", justifyContent: 'center', alignItems:'center', position: 'absolute', top: '50%', left: '50%', gap: '20%'}}>
-                <div style={{width:'15px', height:'15px', borderRadius: '100%', backgroundColor: nipple, }}></div>
-                <div style={{width:'15px', height:'15px', borderRadius: '100%', backgroundColor: nipple, }}></div>
-            </div>
-            <button onClick={handleClick}>Click me</button>
+
         </>
     )
 }
@@ -56,9 +60,7 @@ export default NippleColorChanger
 //                         * previous state in code = most recent state before the update */
 //             const currentIndex = colors.indexOf(prevColor);
 //             const nextIndex = (currentIndex + 1) % colors.length;
-//                                                         /*% = modulo operator gives remainder of division*/
-//                                                         /*.length= method for how many elements are in the array*/
-//                                                         /*color[3]+1 divided by 4 remains [0] starts the loop again  */
+//
 //             return colors[nextIndex];
 //         });    }
 

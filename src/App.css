@@ -44,26 +44,7 @@
   }
 }
 
-.counterQuestion {
-  font-size: 3vh;
-}
-
 .countNumber {
   color: red;
 }
-.boobContainer{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
-.boob {
-  border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.nipple {
-  border-radius: 100px;
-}
