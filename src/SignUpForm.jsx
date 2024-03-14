@@ -1,11 +1,5 @@
-import React, {useRef, useState} from "react";
-
-{/*
-BACKLOG:
-    - if the password is invalid, keep input value, do not reset it to " ", but keep for
-    - the time of password show is very short and I don't know why
-*/
-}
+import React, {useEffect, useRef, useState} from "react";
+/*BACKLOG: 1. the time of password show is very short and I don't know why*/
 
 function SignUpForm() {
     const [email, setEmail] = useState("")
@@ -17,8 +11,6 @@ function SignUpForm() {
     const failedInputEmail = useRef(null)
     const failedInputPassword = useRef(null)
     const failedInputConfirmed = useRef(null)
-    const [errors, setErrors] = useState({})
-
 
     const isEmailValid = () => email.includes("@")
     const isPasswordInvalid = () => (password.length < 8)

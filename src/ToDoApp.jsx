@@ -24,23 +24,19 @@ function ToDoApp() {
     };
     const handleTodoInputChange = (event) => {
         setCurrentTask(event.target.value)
-    }
-    {/*event.target.value = for updating the state variable currentTask to what is currently in the targeted field*/
-    }
+    } /*event.target.value = for updating the state variable currentTask to what is currently in the targeted field*/
 
-    const handleButtonClick = ()=> {
-        if (inputRef.current)
-        /*condition is to check if the input is mounted and nut 'null' anymore*/ {
-            inputRef.current.focus();
-        /*now the input element is mounted, .focus method is applied on it*/
-        }}
+    useEffect(()=>inputRef.current.focus())
+
+
+    /*condition is to check if the input is mounted and nut 'null' anymore*/
+    /*now the input element is mounted, .focus method is applied on it*/
     /* .current = provides direct access to the element it is attached to
     * .focus= native DOM method for buttons, input fields, links*/
     return (
         <>
             <form>
-                <button ref={handleButtonClick}>Add your task here:</button>
-                {/**/}
+                <label htmlFor="newTask" >Add your task here:</label>
                 <div>
                     <input
                         ref={inputRef}
@@ -64,5 +60,4 @@ function ToDoApp() {
         </>
     )
 }
-
 export default ToDoApp;
