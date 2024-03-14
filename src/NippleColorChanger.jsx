@@ -37,7 +37,7 @@ function NippleColorChanger(){
                 <div className="boob" style={{width:'80px', height:'80px', borderRadius: '100%', backgroundColor: breast, display: "flex", alignItems:'center', justifyContent:'center'}}>
                     <div className="nipple" style={{width:'10px', height:'10px', borderRadius: '100%', backgroundColor: nipple, }}></div>
                 </div>
-                <div><button style={{position: 'static'}} onClick={handleClick}>Click me</button></div>
+                <div style={{margin:'1%'}}><button style={{position: 'static'}} onClick={handleClick}>Click me</button></div>
             </div>
 
         </>

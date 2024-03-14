@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 
 function ToDoApp() {
     const [toDos, setToDos] = useState([])
     const [currentTask, setCurrentTask] = useState("")
     const [attemptedSubmit, setAttemptedSubmit] = useState(false)
+    const inputRef = useRef(null)
+    /*useRef returns an object {current: 0} = which can be change and hold the referenced DOM element
+    and bypasses normal data flow and accesses directly the DOM node,
+    null= at the time of initialization the DOM element doesn't exist yet*/
 
     const isInputInvalid = () => currentTask.trim() === ""
     console.log("You need to write something!")
-
     const addTask = (event) => {
         event.preventDefault()
         //     SPA = page does not need to refresh in order to show new content, it is done with JavaScript
@@ -21,23 +24,36 @@ function ToDoApp() {
     };
     const handleTodoInputChange = (event) => {
         setCurrentTask(event.target.value)
-        }
-    {/*event.target.value = for updating the state variable currentTask to what is currently in the targeted field*/}
+    }
+    {/*event.target.value = for updating the state variable currentTask to what is currently in the targeted field*/
+    }
+
+    const handleButtonClick = ()=> {
+        if (inputRef.current)
+        /*condition is to check if the input is mounted and nut 'null' anymore*/ {
+            inputRef.current.focus();
+        /*now the input element is mounted, .focus method is applied on it*/
+        }}
+    /* .current = provides direct access to the element it is attached to
+    * .focus= native DOM method for buttons, input fields, links*/
     return (
         <>
             <form>
-                <label htmlFor="newTask">Add your task here:</label>
+                <button ref={handleButtonClick}>Add your task here:</button>
+                {/**/}
                 <div>
-                <input type="text"
-                       id="newTask"
-                       onChange={handleTodoInputChange}
-                       placeholder={"wash my butt"}
-                       value={currentTask}/>
-                {attemptedSubmit && isInputInvalid() && (
-                    <p style={{color: 'red', fontSize: 'small'}}>You need to write
-                something</p>
-                )}
-            <button onClick= {addTask}>Add task</button>
+                    <input
+                        ref={inputRef}
+                        type="text"
+                        id="newTask"
+                        onChange={handleTodoInputChange}
+                        placeholder={"wash my butt"}
+                        value={currentTask}/>
+                    {attemptedSubmit && isInputInvalid() && (
+                        <p style={{color: 'red', fontSize: 'small'}}>You need to write
+                            something</p>
+                    )}
+                    <button onClick={addTask}>Add task</button>
                 </div>
             </form>
             <ol>
@@ -46,6 +62,7 @@ function ToDoApp() {
             </ol>
             {/*.map = method that takes data from an array and mutates it*/}
         </>
-        )
-    }
+    )
+}
+
 export default ToDoApp;
